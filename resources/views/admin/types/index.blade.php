@@ -2,7 +2,7 @@
     <x-slot name="title">Admin</x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('types') }}
+            {{ __('type') }}
         </h2>
     </x-slot>
 
@@ -56,7 +56,7 @@
                         <thead>
                             <tr>
                                 <th style="max-width: 1%">ID</th>
-                                <th>Name</th>
+                                <th>Nama</th>
                                 <th>Slug</th>
                                 <th style="max-width: 1%">Aksi</th>
                             </tr>

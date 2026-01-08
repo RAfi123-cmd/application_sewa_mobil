@@ -22,7 +22,7 @@ class TypeController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function($type) {
                     return '
-                        <a class="block w-full px-2 py-1 mb-1 text-xs text-center text-white transition duration-500 bg-gray-700 border border-gray-700 rounded-md select-none ease hove:bg-gray-800 focus:outline-none focus:shadow-outline"
+                        <a class="block w-full px-2 py-1 mb-1 text-xs text-center text-white transition duration-500 bg-gray-700 border border-gray-700 rounded-md select-none ease hover:bg-gray-800 focus:outline-none focus:shadow-outline"
                             href="' . route('admin.types.edit', $type->id) . '">
                             Sunting
                         </a>

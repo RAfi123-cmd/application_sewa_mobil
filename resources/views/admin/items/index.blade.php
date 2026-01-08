@@ -2,7 +2,7 @@
     <x-slot name="title">Admin</x-slot>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Brand') }}
+            {{ __('item') }}
         </h2>
     </x-slot>
 
@@ -24,12 +24,26 @@
                     name: 'id',
                     },
                     {
+                    data: 'thumbnail',
+                    name: 'thumbnail',
+                    orderable: false,
+                    searchable: false,
+                    },
+                    {
                     data: 'name',
                     name: 'name',
                     },
                     {
-                    data: 'slug',
-                    name: 'slug',
+                    data: 'type.name',
+                    name: 'type.name',
+                    },
+                    {
+                    data: 'brand.name',
+                    name: 'brand.name',
+                    },
+                    {
+                    data: 'price',
+                    name: 'price',
                     },
                     {
                         data: 'action',
@@ -46,8 +60,8 @@
     <div class="py-12">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mb-10">
-                <a href="{{ route('admin.brands.create') }}" class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
-                    + Buat Brand
+                <a href="{{ route('admin.items.create') }}" class="px-4 py-2 font-bold text-white bg-green-500 rounded shadow-lg hover:bg-green-700">
+                    + Buat item
                 </a>
             </div>
             <div class="overflow-hidden shadow sm:rounded-md">
@@ -56,8 +70,11 @@
                         <thead>
                             <tr>
                                 <th style="max-width: 1%">ID</th>
+                                <th>Thumbnail</th>
                                 <th>Nama</th>
-                                <th>Slug</th>
+                                <th>Type</th>
+                                <th>Brand</th>
+                                <th>Harga</th>
                                 <th style="max-width: 1%">Aksi</th>
                             </tr>
                         </thead>
