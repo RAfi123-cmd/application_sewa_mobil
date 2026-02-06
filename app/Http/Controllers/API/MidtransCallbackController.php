@@ -12,7 +12,7 @@ class MidtransCallbackController extends Controller
 {
     public function callback(){
         // set konfigurasi midtrans
-        Config::$serverKey = config('services.midtrans.servisKey');
+        Config::$serverKey = config('services.midtrans.serverKey');
         Config::$isProduction = config('services.midtrans.isProduction');
         Config::$isSanitized = config('services.midtrans.isSanitized');
         Config::$is3ds = config('services.midtrans.is3ds');

@@ -33,7 +33,7 @@ class Item extends Model
             return Storage::url(json_decode($this->photos)[0]);
         }
 
-        return 'https://via.placeholder.coom/800x600';
+        return 'https://via.placeholder.com/800x600';
     }
 
     public function brand()
